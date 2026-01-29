@@ -1,6 +1,6 @@
 namespace MS_Estoque.Domain.Entities;
 
-public class NotaFiscal
+public class NotaFiscalEntity
 {
     public Guid Id { get; set; }
     public Guid ProdutoId { get; set; }

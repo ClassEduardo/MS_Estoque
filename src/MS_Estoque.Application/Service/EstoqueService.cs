@@ -1,8 +1,8 @@
 using MS_Estoque.Application.DTO;
-using MS_Estoque.Application.UseCase.Estoque.Interface;
+using MS_Estoque.Application.Interface;
 using Newtonsoft.Json;
 
-namespace MS_Estoque.Application.UseCase.Estoque.Service;
+namespace MS_Estoque.Application.Service;
 
 public class EstoqueService : IEstoqueService
 {

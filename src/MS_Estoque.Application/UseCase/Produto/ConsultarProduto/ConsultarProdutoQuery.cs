@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace MS_Estoque.Application.UseCase.Estoque.ConsultarProduto;
+namespace MS_Estoque.Application.UseCase.Produto.ConsultarProduto;
 
 public class ConsultarProdutoQuery : IRequest<string>
 {

@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace MS_Estoque.Application.UseCase.Estoque.ExcluirProduto;
+namespace MS_Estoque.Application.UseCase.Produto.ExcluirProduto;
 
 public class ExcluirProdutoCommand : IRequest<string>
 {

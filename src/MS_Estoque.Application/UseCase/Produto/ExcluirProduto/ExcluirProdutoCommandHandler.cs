@@ -1,7 +1,7 @@
 using MediatR;
 using Newtonsoft.Json;
 
-namespace MS_Estoque.Application.UseCase.Estoque.ExcluirProduto;
+namespace MS_Estoque.Application.UseCase.Produto.ExcluirProduto;
 
 public class ExcluirProdutoCommandHandler : IRequestHandler<ExcluirProdutoCommand, string>
 {

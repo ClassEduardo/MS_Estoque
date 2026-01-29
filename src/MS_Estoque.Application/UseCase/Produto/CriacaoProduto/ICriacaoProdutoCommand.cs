@@ -1,7 +1,6 @@
 using MediatR;
-using MS_Estoque.Domain.Entities;
 
-namespace MS_Estoque.Application.UseCase.Estoque.CriacaoProduto;
+namespace MS_Estoque.Application.UseCase.Produto.CriacaoProduto;
 
 public class CriacaoProdutoCommand : IRequest<string>
 {

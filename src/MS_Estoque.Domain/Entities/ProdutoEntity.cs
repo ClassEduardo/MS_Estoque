@@ -1,6 +1,6 @@
 namespace MS_Estoque.Domain.Entities;
 
-public class Produto
+public class ProdutoEntity
 {
     public Guid Id { get; set; }
     public string Nome { get; set; } = string.Empty;

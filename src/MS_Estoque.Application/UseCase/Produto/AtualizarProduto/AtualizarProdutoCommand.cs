@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace MS_Estoque.Application.UseCase.Estoque.AtualizarProduto;
+namespace MS_Estoque.Application.UseCase.Produto.AtualizarProduto;
 
 public class AtualizarProdutoCommand : IRequest<string>
 {

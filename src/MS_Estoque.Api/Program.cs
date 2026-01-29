@@ -1,8 +1,8 @@
 
 
 using Microsoft.Extensions.Options;
-using MS_Estoque.Application.UseCase.Estoque.Interface;
-using MS_Estoque.Application.UseCase.Estoque.Service;
+using MS_Estoque.Application.Interface;
+using MS_Estoque.Application.Service;
 using MS_Estoque.Infrastructure.Mensageria.Configuracao;
 using MS_Estoque.Infrastructure.Mensageria.Interfaces;
 using MS_Estoque.Infrastructure.Mensageria.Services;

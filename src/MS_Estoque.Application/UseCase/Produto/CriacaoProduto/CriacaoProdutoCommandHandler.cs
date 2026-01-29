@@ -2,14 +2,14 @@ using MediatR;
 using MS_Estoque.Domain.Entities;
 using Newtonsoft.Json;
 
-namespace MS_Estoque.Application.UseCase.Estoque.CriacaoProduto;
+namespace MS_Estoque.Application.UseCase.Produto.CriacaoProduto;
 
 public class CriacaoProdutoCommandHandler : IRequestHandler<CriacaoProdutoCommand, string>
 {
     public Task<string> Handle(CriacaoProdutoCommand request, CancellationToken cancellationToken)
     {
         var guid = Guid.NewGuid();
-        var produto = new Produto
+        var produto = new ProdutoEntity
         {
             Id = guid,
             Nome = request.Nome,

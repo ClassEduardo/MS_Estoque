@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MS_Estoque.Application.UseCase.Estoque.Interface
+namespace MS_Estoque.Application.Interface
 {
     public interface IEstoqueService
     {
