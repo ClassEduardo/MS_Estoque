@@ -1,9 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MS_Estoque.Application.UseCase.Estoque.ConsultarProduto;
-using MS_Estoque.Application.UseCase.Estoque.ExcluirProduto;
 using MS_Estoque.Application.UseCase.Produto.AtualizarProduto;
+using MS_Estoque.Application.UseCase.Produto.ConsultarProduto;
 using MS_Estoque.Application.UseCase.Produto.CriacaoProduto;
+using MS_Estoque.Application.UseCase.Produto.ExcluirProduto;
 
 namespace MS_Estoque.Api.Controllers;
 
