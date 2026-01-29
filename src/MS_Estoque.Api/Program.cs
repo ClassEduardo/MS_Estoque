@@ -3,9 +3,12 @@
 using Microsoft.Extensions.Options;
 using MS_Estoque.Application.Interface;
 using MS_Estoque.Application.Service;
+using MS_Estoque.Domain.Entities;
+using MS_Estoque.Domain.Repositories;
 using MS_Estoque.Infrastructure.Mensageria.Configuracao;
 using MS_Estoque.Infrastructure.Mensageria.Interfaces;
 using MS_Estoque.Infrastructure.Mensageria.Services;
+using MS_Estoque.Infrastructure.Repositories;
 using RabbitMQ.Client;
 using Scalar.AspNetCore;
 
@@ -34,10 +37,27 @@ builder.Services.AddSingleton<IConnection>(provider =>
     return factory.CreateConnectionAsync().GetAwaiter().GetResult();
 });
 
+builder.Services.AddMediatR(cfg =>
+{
+    var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+    foreach (var assembly in assemblies)
+    {
+        cfg.RegisterServicesFromAssembly(assembly);
+    }
+});
+
 // Registra o Consumer
 builder.Services.AddSingleton<IRabbitMqRpcConsumer, RabbitMqRpcConsumer>();
-
 builder.Services.AddScoped<IEstoqueService, EstoqueService>();
+
+builder.Services.AddScoped<IRepositoryBase<ProdutoEntity>>(provider =>
+    new JsonRepositoryBase<ProdutoEntity>("produtos.json"));
+
+builder.Services.AddScoped<IRepositoryBase<NotaFiscalEntity>>(provider =>
+    new JsonRepositoryBase<NotaFiscalEntity>("notas-fiscais.json"));
+
+builder.Services.AddScoped<IRepositoryBase<EstoqueProdutoEntity>>(provider =>
+    new JsonRepositoryBase<EstoqueProdutoEntity>("estoques-produtos.json"));
 
 var app = builder.Build();
 
