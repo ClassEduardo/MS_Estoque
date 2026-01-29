@@ -1,5 +1,5 @@
 using MediatR;
-using MS_Estoque.Domain.Entities;
+using MS_Estoque.Domain.Models;
 using Newtonsoft.Json;
 
 namespace MS_Estoque.Application.UseCase.Produto.CriacaoProduto;

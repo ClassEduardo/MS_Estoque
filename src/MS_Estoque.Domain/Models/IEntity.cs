@@ -1,4 +1,4 @@
-namespace MS_Estoque.Domain.Entities;
+namespace MS_Estoque.Domain.Models;
 
 public interface IEntity
 {

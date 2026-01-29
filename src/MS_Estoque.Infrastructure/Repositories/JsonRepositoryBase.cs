@@ -1,6 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using MS_Estoque.Domain.Entities;
+using MS_Estoque.Domain.Models;
 using MS_Estoque.Domain.Repositories;
 
 namespace MS_Estoque.Infrastructure.Repositories;

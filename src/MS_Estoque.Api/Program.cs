@@ -3,7 +3,7 @@
 using Microsoft.Extensions.Options;
 using MS_Estoque.Application.Interface;
 using MS_Estoque.Application.Service;
-using MS_Estoque.Domain.Entities;
+using MS_Estoque.Domain.Models;
 using MS_Estoque.Domain.Repositories;
 using MS_Estoque.Infrastructure.Mensageria.Configuracao;
 using MS_Estoque.Infrastructure.Mensageria.Interfaces;
