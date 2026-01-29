@@ -9,11 +9,14 @@ namespace MS_Estoque.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProdutosController(
-    IMediator mediator
-) : ControllerBase
+public class ProdutosController : ControllerBase
 {
-    private readonly IMediator _mediator = mediator;
+    private readonly IMediator _mediator;
+
+    public ProdutosController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
 
     [HttpGet]
     public IActionResult PedidoGet()
@@ -46,7 +49,7 @@ public class ProdutosController(
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> PedidoPost([FromBody] CriacaoProdutoCommand command)
     {
-        var resultado = await mediator.Send(command);
+        var resultado = await _mediator.Send(command);
         return CreatedAtAction(nameof(ConsultarProduto), new { id = Guid.NewGuid() }, resultado);
     }
 
