@@ -9,7 +9,7 @@ namespace MS_Estoque.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class EstoqueController(
+public class ProdutosController(
     IMediator mediator
 ) : ControllerBase
 {
