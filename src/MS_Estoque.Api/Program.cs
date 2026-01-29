@@ -23,7 +23,6 @@ builder.Services.Configure<RabbitMqConfiguracao>(
 
 builder.Services.AddSingleton<IConnection>(provider =>
 {
-    // Cria a conexão TCP com o rabbit
     var config = provider.GetRequiredService<IOptions<RabbitMqConfiguracao>>().Value;
 
     var factory = new ConnectionFactory
